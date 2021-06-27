@@ -5,7 +5,7 @@
   tasks:
   - name: Clone Git Repo
     git:
-      repo: 'git@github.com:adhig93/Ansible-Tower-with-Terraform.git'
+      repo: 'https://adhig93:AWSdevops*123@github.com:adhig93/Ansible-Tower-with-Terraform.git'
       dest: /etc/ansible/git/
       version: main
       accept_hostkey: yes
