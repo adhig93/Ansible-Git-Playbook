@@ -1,6 +1,7 @@
 - name: Ansible Tower Git Repo
-  hosts: localhost
-  become_user: root
+  hosts: all
+  remote_user: ubuntu
+  become: true
   tasks:
   - name: Clone Git Repo
     git:
