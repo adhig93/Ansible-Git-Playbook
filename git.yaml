@@ -1,0 +1,15 @@
+- name: Ansible Tower Git Repo
+  hosts: localhost
+  tasks:
+  - name: Clone Git Repo
+    git:
+      repo: 'git@github.com:adhig93/Ansible-Tower-with-Terraform.git'
+      dest: /etc/ansible/git/
+      version: main
+      accept_hostkey: yes
+  - name: Cloning Terraform Files  
+    git:
+      repo: 'git@github.com:adhig93/VPC-Simple.git'
+      dest: /etc/ansible/git/
+      version: master
+      accept_hostkey: yes 
