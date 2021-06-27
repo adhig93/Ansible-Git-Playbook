@@ -10,6 +10,14 @@
   - name: Cloning Terraform Files  
     git:
       repo: 'git@github.com:adhig93/VPC-Simple.git'
-      dest: /etc/ansible/git/
+      dest: /etc/ansible/VPC/
       version: master
       accept_hostkey: yes 
+  - name: Pushing Terraform Files to Github
+    shell: |
+      rm -rf /etc/ansible/git/*
+      mkdir /etc/ansible/git/VPC-Simple
+      cp -r /etc/ansible/VPC/* /etc/ansible/git/VPC-Simple
+      rm -rf /etc/ansible/VPC
+      cd /etc/ansible/git
+      git add -A && git commit -m "Added Files" && git push
