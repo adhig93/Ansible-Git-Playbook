@@ -11,7 +11,7 @@
       accept_hostkey: yes
   - name: Cloning Terraform Files  
     git:
-      repo: 'git@github.com:adhig93/VPC-Simple.git'
+      repo: 'https://adhig93:AWSdevops*123@github.com/adhig93/VPC-Simple.git'
       dest: /etc/ansible/VPC/
       version: master
       accept_hostkey: yes 
