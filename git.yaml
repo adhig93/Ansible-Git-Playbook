@@ -1,5 +1,6 @@
 - name: Ansible Tower Git Repo
   hosts: localhost
+  become: true
   tasks:
   - name: Clone Git Repo
     git:
